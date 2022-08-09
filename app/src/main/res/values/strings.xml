@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FinalProject_RockPaperScissors</string>
+    <string name="UserName">user</string>
 </resources>
