@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F2F2F2"
+    style="@style/bgnight"
     tools:context=".MainActivity">
 
     <View
@@ -56,27 +57,27 @@
         app:layout_constraintTop_toBottomOf="@+id/view">
 
         <Button
+            style="@style/btnnight"
             android:id="@+id/bttnEasy"
             android:layout_width="100dp"
             android:layout_height="55dp"
             android:layout_margin="8dp"
-            android:backgroundTint="#000000"
             android:text="EASY" />
 
         <Button
+            style="@style/btnnight"
             android:id="@+id/bttnNorm"
             android:layout_width="100dp"
             android:layout_height="55dp"
             android:layout_margin="8dp"
-            android:backgroundTint="#000000"
             android:text="NORMAL" />
 
         <Button
+            style="@style/btnnight"
             android:id="@+id/bttnHard"
             android:layout_width="100dp"
             android:layout_height="55dp"
             android:layout_margin="8dp"
-            android:backgroundTint="#000000"
             android:text="HARD" />
     </LinearLayout>
 
