@@ -3,4 +3,12 @@
     <string name="UserName">user</string>
     <string name="Welcome_intro">Welcome to,</string>
     <string name="Description_intro">with a twist</string>
+    <string name="txt_rock">ROCK</string>
+    <string name="txt_paper">PAPER</string>
+    <string name="txt_scissors">SCISSORS</string>
+    <string name="txt_go">GO</string>
+    <string name="lives">lives: 0</string>
+    <string name="coins">coins: 0</string>
+    <string name="AI">A.I.</string>
+    <string name="txtResult">"Result: "</string>
 </resources>
