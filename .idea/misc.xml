@@ -3,9 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/CSB/2nd Year/3rd Term/MOBDEVT/Activities/RockPaperScissorstwist/app/src/main/res/layout/activity_game.xml" value="0.33" />
-        <entry key="..\:/CSB/2nd Year/3rd Term/MOBDEVT/Activities/RockPaperScissorstwist/app/src/main/res/layout/activity_launcher.xml" value="0.371875" />
+        <entry key="..\:/CSB/2nd Year/3rd Term/MOBDEVT/Activities/RockPaperScissorstwist/app/src/main/res/layout/activity_game.xml" value="0.371875" />
         <entry key="..\:/CSB/2nd Year/3rd Term/MOBDEVT/Activities/RockPaperScissorstwist/app/src/main/res/layout/activity_main.xml" value="0.371875" />
+        <entry key="..\:/Users/pierre/AndroidStudioProjects/FinalProject_RockPaperScissors/app/src/main/res/drawable/box.xml" value="0.1145" />
+        <entry key="..\:/Users/pierre/AndroidStudioProjects/FinalProject_RockPaperScissors/app/src/main/res/layout-land/activity_launcher.xml" value="0.5" />
+        <entry key="..\:/Users/pierre/AndroidStudioProjects/FinalProject_RockPaperScissors/app/src/main/res/layout-land/activity_main.xml" value="0.42552083333333335" />
+        <entry key="..\:/Users/pierre/AndroidStudioProjects/FinalProject_RockPaperScissors/app/src/main/res/layout/activity_game.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/pierre/AndroidStudioProjects/FinalProject_RockPaperScissors/app/src/main/res/layout/activity_launcher.xml" value="0.5" />
+        <entry key="..\:/Users/pierre/AndroidStudioProjects/FinalProject_RockPaperScissors/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/pierre/AndroidStudioProjects/FinalProject_RockPaperScissors/app/src/main/res/layout/activity_shop.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

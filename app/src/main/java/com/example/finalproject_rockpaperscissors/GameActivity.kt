@@ -11,6 +11,7 @@ import com.example.finalproject_rockpaperscissors.viewModel.GameViewModel
 class GameActivity : AppCompatActivity() {
     private lateinit var binding: ActivityGameBinding
     private lateinit var extra: String
+    private var diffExtra: Int = 0
     private var choice = 0
     private var lives = 0
     private var rockClicked = false
@@ -33,7 +34,7 @@ class GameActivity : AppCompatActivity() {
         binding = ActivityGameBinding.inflate(layoutInflater)
 //        setContentView(R.layout.activity_game)
         setContentView(binding.root)
-
+        diffExtra = intent.getIntExtra(DIFF, 0)
         extra = intent.getStringExtra(USER) ?: getString(R.string.UserName)
         txtUser.text = extra
         viewModel.username.value = extra
