@@ -230,9 +230,12 @@ class GameActivity : AppCompatActivity() {
                 if(random == 1){
                     viewModel.imageViewAI.value = ContextCompat.getDrawable(this, R.drawable.rock)
                     imageViewAI.setImageDrawable(viewModel.imageViewAI.value)
-                    viewModel.coinsLeft.value = viewModel.coinsLeft.value?.plus(5)
+//                    viewModel.coinsLeft.value = viewModel.coinsLeft.value?.plus(5)
+                    lives = 3
+                    coins += 5
                     viewModel.result.value = "Result: VICTORY. 5 points won"
                     txtResult.text = viewModel.result.value
+                    txtCoins.text = coins.toString()
 //                    txtLives.text = "PANALO"
                 }
                 else if(random == 2){
@@ -247,19 +250,23 @@ class GameActivity : AppCompatActivity() {
                     imageViewAI.setImageDrawable(viewModel.imageViewAI.value)
                     if(diffExtra.equals(3))
                     {
-                        viewModel.livesLeft.value = viewModel.livesLeft.value?.minus(3)
+//                        viewModel.livesLeft.value = viewModel.livesLeft.value?.minus(3)
+                        hp -= 3
                         viewModel.result.value = "Result: DEFEATED. 3 lives deducted"
                     }
                     else if(diffExtra.equals(2))
                     {
-                        viewModel.livesLeft.value = viewModel.livesLeft.value?.minus(2)
+//                        viewModel.livesLeft.value = viewModel.livesLeft.value?.minus(2)
+                        hp -= 2
                         viewModel.result.value = "Result: DEFEATED. 2 lives deducted"
                     }
                     else
                     {
-                        viewModel.livesLeft.value = viewModel.livesLeft.value?.minus(1)
+//                        viewModel.livesLeft.value = viewModel.livesLeft.value?.minus(1)
+                        hp -= 1
                         viewModel.result.value = "Result: DEFEATED. 1 lives deducted"
                     }
+                    txtLives.text = hp.toString()
                     txtResult.text = viewModel.result.value
 //                    txtLives.text = "TALO"
                     checkLives()
@@ -272,19 +279,23 @@ class GameActivity : AppCompatActivity() {
                     imageViewAI.setImageDrawable(viewModel.imageViewAI.value)
                     if(diffExtra.equals(3))
                     {
-                        viewModel.livesLeft.value = viewModel.livesLeft.value?.minus(3)
+//                        viewModel.livesLeft.value = viewModel.livesLeft.value?.minus(3)
+                        hp -= 3
                         viewModel.result.value = "Result: DEFEATED. 3 lives deducted"
                     }
                     else if(diffExtra.equals(2))
                     {
-                        viewModel.livesLeft.value = viewModel.livesLeft.value?.minus(2)
+//                        viewModel.livesLeft.value = viewModel.livesLeft.value?.minus(2)
+                        hp -= 2
                         viewModel.result.value = "Result: DEFEATED. 2 lives deducted"
                     }
                     else
                     {
-                        viewModel.livesLeft.value = viewModel.livesLeft.value?.minus(1)
+//                        viewModel.livesLeft.value = viewModel.livesLeft.value?.minus(1)
+                        hp -= 1
                         viewModel.result.value = "Result: DEFEATED. 1 lives deducted"
                     }
+                    txtLives.text = hp.toString()
                     txtResult.text = viewModel.result.value
 //                    txtLives.text = "TALO"
                     checkLives()
@@ -292,9 +303,12 @@ class GameActivity : AppCompatActivity() {
                 else if(random == 2){
                     viewModel.imageViewAI.value = ContextCompat.getDrawable(this, R.drawable.paper)
                     imageViewAI.setImageDrawable(viewModel.imageViewAI.value)
-                    viewModel.coinsLeft.value = viewModel.coinsLeft.value?.plus(5)
+//                    viewModel.coinsLeft.value = viewModel.coinsLeft.value?.plus(5)
+                    lives = 3
+                    coins += 5
                     viewModel.result.value = "Result: VICTORY. 5 points won"
                     txtResult.text = viewModel.result.value
+                    txtCoins.text = coins.toString()
 //                    txtLives.text = "PANALO"
                 }
                 else{
@@ -308,8 +322,5 @@ class GameActivity : AppCompatActivity() {
             btn_Go.isEnabled = false
             btn_Go.isClickable = false
         }
-
-
     }
-
 }

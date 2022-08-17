@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FinalProject_RockPaperScissors</string>
+    <string name="app_name">Rock Paper Scissor with a Twist!</string>
     <string name="UserName">user</string>
     <string name="Welcome_intro">Welcome to,</string>
     <string name="Description_intro">with a twist</string>
