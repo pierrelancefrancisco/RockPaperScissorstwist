@@ -78,7 +78,6 @@
     <Button
 
         android:id="@+id/buttonBuy"
-
         style="@style/btnnight"
         android:layout_width="95dp"
         android:layout_height="51dp"
@@ -96,8 +95,6 @@
         android:layout_width="95dp"
         android:layout_height="51dp"
         android:text="Menu"
-
-        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
