@@ -10,7 +10,7 @@
         android:id="@+id/view2"
         android:layout_width="335dp"
         android:layout_height="8dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/box"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,9 +18,8 @@
 
     <ImageView
         android:id="@+id/imageViewUser"
-        android:layout_width="81dp"
-        android:layout_height="91dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view2"
@@ -29,9 +28,9 @@
 
     <ImageView
         android:id="@+id/imageViewAI"
-        android:layout_width="81dp"
-        android:layout_height="91dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
@@ -42,9 +41,8 @@
         android:id="@+id/txtUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
         android:text="TextView"
-        android:textSize="34sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +53,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:text="@string/txt_rock"
         app:layout_constraintBottom_toTopOf="@+id/btn_Go"
         app:layout_constraintEnd_toStartOf="@+id/btn_Paper"
@@ -66,7 +63,6 @@
         android:id="@+id/btn_Paper"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="@string/txt_paper"
         app:layout_constraintBottom_toTopOf="@+id/btn_Go"
         app:layout_constraintEnd_toStartOf="@+id/btn_Scissors"
@@ -78,7 +74,6 @@
         android:id="@+id/btn_Scissors"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:text="@string/txt_scissors"
         android:textSize="10sp"
@@ -91,8 +86,9 @@
         android:id="@+id/btn_Go"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:text="@string/txt_go"
-        app:layout_constraintBottom_toTopOf="@+id/txt_result"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_Paper" />
@@ -102,8 +98,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/lives"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
-        app:layout_constraintEnd_toStartOf="@+id/txt_coins"
+        app:layout_constraintEnd_toStartOf="@+id/textView6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -111,21 +106,19 @@
         android:id="@+id/txt_coins"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
         android:text="@string/coins"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txt_lives"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/AI"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -138,6 +131,8 @@
         android:text="Result: "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintStart_toEndOf="@+id/btn_Go"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Scissors"
+        app:layout_constraintVertical_bias="0.505" />
 </androidx.constraintlayout.widget.ConstraintLayout>
