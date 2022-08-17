@@ -160,6 +160,8 @@ class GameActivity : AppCompatActivity() {
             btn_Scissors.isClickable = false
             btn_Rock.isEnabled = false
             btn_Rock.isClickable = false
+            hp = 0
+            txtLives.text = hp.toString()
         }
         btn_Shop.setOnClickListener{
             val intent = Intent(this, ShopActivity::class.java)
