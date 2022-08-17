@@ -14,6 +14,8 @@ class GameViewModel: ViewModel() {
     private val _result = MutableLiveData<String>()
     private val _imageViewAI = MutableLiveData<Drawable>()
     private val _imageViewUser = MutableLiveData<Drawable>()
+    private val _newLives = MutableLiveData<Int>()
+    var newLives = _newLives
     var livesLeft = _livesLeft
     var coinsLeft = _coinsLeft
     var username = _username
@@ -26,6 +28,7 @@ class GameViewModel: ViewModel() {
         _livesLeft.value = 5
         _coinsLeft.value = 5
     }
+
 
 
 

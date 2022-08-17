@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".GameActivity">
 
+    <Button
+        android:id="@+id/btn_Shop"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/shop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.934" />
+
     <View
         android:id="@+id/view2"
         android:layout_width="335dp"
@@ -72,7 +84,7 @@
         app:layout_constraintEnd_toStartOf="@+id/btn_Scissors"
         app:layout_constraintStart_toEndOf="@+id/btn_Rock"
         app:layout_constraintTop_toBottomOf="@+id/txtUsername"
-        app:layout_constraintVertical_bias="0.029" />
+        app:layout_constraintVertical_bias="0.507" />
 
     <Button
         android:id="@+id/btn_Scissors"
@@ -89,13 +101,15 @@
 
     <Button
         android:id="@+id/btn_Go"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="@string/txt_go"
-        app:layout_constraintBottom_toTopOf="@+id/txt_result"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.848"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_Paper" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.934" />
 
     <TextView
         android:id="@+id/txt_lives"

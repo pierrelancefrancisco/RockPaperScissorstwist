@@ -10,5 +10,6 @@
     <string name="lives">lives: 0</string>
     <string name="coins">coins: 0</string>
     <string name="AI">A.I.</string>
+    <string name="shop">Shop</string>
     <string name="txtResult">"Result: "</string>
 </resources>
