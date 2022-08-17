@@ -69,7 +69,6 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        style="@style/btnnight"
         android:id="@+id/buttonStartLauncher"
         android:layout_width="244dp"
         android:layout_height="97dp"
