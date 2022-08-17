@@ -56,12 +56,12 @@ class GameActivity : AppCompatActivity() {
 
         val shop_username = intent.getStringExtra("TEMP_USERNAME")
         txtUser.text = shop_username.toString()
-        txtCoins.text = "Coins: " + shop_coins
-        txtLives.text = "Lives: " + shop_lives
+        txtCoins.text = shop_coins
+        txtLives.text =  shop_lives
         if(chcker.equals(0)) {
             diffExtra = intent.getIntExtra(DIFF, 0)
-            txtLives.text = "Lives: " + hp.toString()
-            txtCoins.text = "Coins: " +coins.toString()
+            txtLives.text = hp.toString()
+            txtCoins.text = coins.toString()
             viewModel.username.value = extra
 
         }
