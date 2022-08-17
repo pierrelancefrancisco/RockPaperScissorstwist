@@ -1,5 +1,6 @@
 package com.example.finalproject_rockpaperscissors
 
+import android.content.Intent
 import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -95,6 +96,17 @@ class GameActivity : AppCompatActivity() {
         }
 
     }
+
+
+    private fun checkLives(){
+        val r = viewModel.livesLeft.value!!
+        if(r <= 0){
+            val intent = Intent(this, ShopActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+
     private fun Compare(){
         btn_Go.setOnClickListener {
             if(choice == 1){
@@ -109,9 +121,23 @@ class GameActivity : AppCompatActivity() {
                 else if(random == 2){
                     viewModel.imageViewAI.value = ContextCompat.getDrawable(this, R.drawable.paper)
                     imageViewAI.setImageDrawable(viewModel.imageViewAI.value)
-                    viewModel.livesLeft.value = viewModel.livesLeft.value?.minus(1)
-                    viewModel.result.value = "Result: DEFEATED. 1 lives deducted"
+                    if(diffExtra.equals(3))
+                    {
+                        viewModel.livesLeft.value = viewModel.livesLeft.value?.minus(3)
+                        viewModel.result.value = "Result: DEFEATED. 3 lives deducted"
+                    }
+                    else if(diffExtra.equals(2))
+                    {
+                        viewModel.livesLeft.value = viewModel.livesLeft.value?.minus(2)
+                        viewModel.result.value = "Result: DEFEATED. 2 lives deducted"
+                    }
+                    else
+                    {
+                        viewModel.livesLeft.value = viewModel.livesLeft.value?.minus(1)
+                        viewModel.result.value = "Result: DEFEATED. 1 lives deducted"
+                    }
                     txtResult.text = viewModel.result.value
+                    checkLives()
 //                    txtLives.text = "TALO"
                 }
                 else{
@@ -144,10 +170,24 @@ class GameActivity : AppCompatActivity() {
                 else{
                     viewModel.imageViewAI.value = ContextCompat.getDrawable(this, R.drawable.scissors)
                     imageViewAI.setImageDrawable(viewModel.imageViewAI.value)
-                    viewModel.livesLeft.value = viewModel.livesLeft.value?.minus(1)
-                    viewModel.result.value = "Result: DEFEATED. 1 lives deducted"
+                    if(diffExtra.equals(3))
+                    {
+                        viewModel.livesLeft.value = viewModel.livesLeft.value?.minus(3)
+                        viewModel.result.value = "Result: DEFEATED. 3 lives deducted"
+                    }
+                    else if(diffExtra.equals(2))
+                    {
+                        viewModel.livesLeft.value = viewModel.livesLeft.value?.minus(2)
+                        viewModel.result.value = "Result: DEFEATED. 2 lives deducted"
+                    }
+                    else
+                    {
+                        viewModel.livesLeft.value = viewModel.livesLeft.value?.minus(1)
+                        viewModel.result.value = "Result: DEFEATED. 1 lives deducted"
+                    }
                     txtResult.text = viewModel.result.value
 //                    txtLives.text = "TALO"
+                    checkLives()
                 }
             }
             else if(choice == 3){
@@ -155,10 +195,24 @@ class GameActivity : AppCompatActivity() {
                 if(random == 1){
                     viewModel.imageViewAI.value = ContextCompat.getDrawable(this, R.drawable.rock)
                     imageViewAI.setImageDrawable(viewModel.imageViewAI.value)
-                    viewModel.livesLeft.value = viewModel.livesLeft.value?.minus(1)
-                    viewModel.result.value = "Result: DEFEATED. 1 lives deducted"
+                    if(diffExtra.equals(3))
+                    {
+                        viewModel.livesLeft.value = viewModel.livesLeft.value?.minus(3)
+                        viewModel.result.value = "Result: DEFEATED. 3 lives deducted"
+                    }
+                    else if(diffExtra.equals(2))
+                    {
+                        viewModel.livesLeft.value = viewModel.livesLeft.value?.minus(2)
+                        viewModel.result.value = "Result: DEFEATED. 2 lives deducted"
+                    }
+                    else
+                    {
+                        viewModel.livesLeft.value = viewModel.livesLeft.value?.minus(1)
+                        viewModel.result.value = "Result: DEFEATED. 1 lives deducted"
+                    }
                     txtResult.text = viewModel.result.value
 //                    txtLives.text = "TALO"
+                    checkLives()
                 }
                 else if(random == 2){
                     viewModel.imageViewAI.value = ContextCompat.getDrawable(this, R.drawable.paper)
