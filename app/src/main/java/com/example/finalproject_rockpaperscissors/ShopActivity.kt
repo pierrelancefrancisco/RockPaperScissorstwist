@@ -23,13 +23,14 @@ class ShopActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val username = intent.getStringExtra("USERNAME")
-        val coins = intent.getStringExtra("COINS")
-        val lives = intent.getStringExtra("LIVES")
+        var coins = intent.getIntExtra("COINS",0)
+        var lives = intent.getIntExtra("LIVES", 0)
+        val Diff = intent.getIntExtra("DIFDIF", 0)
 
 
         viewUsername!!.text = username
-        viewCoins!!.text = coins
-        viewLives!!.text = lives
+        viewCoins!!.text = coins.toString()
+        viewLives!!.text = lives.toString()
 
 
 
@@ -38,17 +39,18 @@ class ShopActivity : AppCompatActivity() {
         binding.buttonBuy.setOnClickListener{
             val intent = Intent(this, GameActivity::class.java)
 
-            var tempCoins: Int = viewCoins.toString().toInt()
-            var tempLives: Int = viewLives.toString().toInt()
-
-            viewModel.newLives.value?.plus(viewLives.toString().toInt() + 5)
+            var tempCoins: Int = coins.toString().toInt()
+            var tempLives: Int = lives.toString().toInt()
+            //viewModel.newLives.value?.plus(viewLives.toString().toInt() + 5)
 
             tempCoins -= 5
-//          tempLives += 3
+            tempLives += 5
 
+            intent.putExtra("checkthis", 2)
             intent.putExtra("TEMP_COINS", tempCoins.toString())
-//            intent.putExtra("TEMP_LIVES", tempLives.toString())
-            intent.putExtra("TEMP_USERNAME", viewUsername!!.text.toString())
+            intent.putExtra("TEMP_LIVES", tempLives.toString())
+            intent.putExtra("TEMP_USERNAME", username.toString())
+            intent.putExtra("TEMP_DIFF", Diff)
             startActivity(intent)
         }
 
