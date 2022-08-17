@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
 import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
 import com.example.finalproject_rockpaperscissors.databinding.ActivityGameBinding
@@ -18,6 +19,7 @@ class GameActivity : AppCompatActivity() {
     private var choice = 0
     private var lives = 0
     private var hp = 5
+    private var counter = 0
     private var coins = 5
     private var chcker = 0
     private var rockClicked = false
@@ -72,6 +74,7 @@ class GameActivity : AppCompatActivity() {
             viewModel.username.value = shop_username
             val shop_diff = intent.getIntExtra("TEMP_DIFF", 0)
             diffExtra = shop_diff
+            counter = intent.getIntExtra(RETURN_WIN,0)
         }
 
         viewModel.username.observe(this){
@@ -146,7 +149,6 @@ class GameActivity : AppCompatActivity() {
 
     }
 
-
     private fun checkLives(){
         val r = hp
         if(r < 1){
@@ -169,6 +171,7 @@ class GameActivity : AppCompatActivity() {
             intent.putExtra("LIVES", txtLives.text.toString().toInt())
             intent.putExtra("USERNAME", txtUser.text.toString())
             intent.putExtra("DIFDIF", diffExtra)
+            intent.putExtra("WINCOUNTER", counter)
             startActivity(intent)
         }
     }
@@ -224,6 +227,7 @@ class GameActivity : AppCompatActivity() {
                     txtCoins.text = coins.toString()
                     viewModel.result.value = "Result: VICTORY. 5 points won"
                     txtResult.text = viewModel.result.value
+                    counter++
 //                    txtLives.text = "PANALO"
                 }
             }
@@ -238,6 +242,7 @@ class GameActivity : AppCompatActivity() {
                     viewModel.result.value = "Result: VICTORY. 5 points won"
                     txtResult.text = viewModel.result.value
                     txtCoins.text = coins.toString()
+                    counter++
 //                    txtLives.text = "PANALO"
                 }
                 else if(random == 2){
@@ -311,6 +316,7 @@ class GameActivity : AppCompatActivity() {
                     viewModel.result.value = "Result: VICTORY. 5 points won"
                     txtResult.text = viewModel.result.value
                     txtCoins.text = coins.toString()
+                    counter++
 //                    txtLives.text = "PANALO"
                 }
                 else{
